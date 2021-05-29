@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="icon" href="excel-logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="toolbar">
+        <div class="logo-container">
+            <img src="excel-logo.png" alt="excel" class="logo">
+        </div>
+        <div class="tools">
+            <input type="text" class="filename" value="Untitled Spreadsheet">
+            <div class="file_options">
+                <div class="file option">
+                    <div  class="dropbtn">File</div>
+                    <div id="myDropdown" class="dropdown-content">
+                        <div class="new">New</div>
+                        <div class="open">Open</div>
+                        <div class="save">Save</div>
+                      </div>
+                </div>
+                <div class="edit option">Edit</div>
+                <div class="view option">View</div>
+                <div class="insert option">Insert</div>
+                <div class="format option">Format</div>
+                <div class="data option">Data</div>
+                <div class="tools option">Tools</div>
+            </div>
+            <hr class="divider">
+            <div class="formattingbar">
+                <select class="fontsize">
+                    <option value="10">10px</option>
+                    <option value="12">12px</option>
+                    <option value="14">14px</option>
+                    <option value="16">16px</option>
+                    <option value="18">18px</option>
+                    <option value="20">20px</option>
+                </select>
+                <select class="font-family">
+                    <option value="monospace">monospace</option>
+                    <option value="sans-serif" selected>sans-serif</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="fantasy">fantasy</option>
+                </select>
+                <div class="bui-container">
+                    <div class="bold">
+                        <span class="material-icons-outlined material-icons">
+                            format_bold
+                            </span>
+                    </div>
+                    <div class="strike-through">
+                        <span class="material-icons-outlined material-icons">
+                            strikethrough_s
+                            </span>
+                    </div>
+                    <div class="italic">
+                        <span class="material-icons-outlined material-icons">
+                            format_italic
+                            </span>
+                    </div>
+                </div>
+                <!--alignmnet -->
+                <div class="align-container">
+                    <div class="left">
+                        <span class="material-icons-outlined material-icons">
+                            align_horizontal_left
+                            </span>
+                    </div>
+                    <div class="right">
+                        <span class="material-icons-outlined material-icons">
+                            align_horizontal_right
+                            </span>
+                    </div>
+                    <div class="center">
+                        <span class="material-icons-outlined material-icons">
+                            align_horizontal_center
+                            </span>
+                    </div>    
+                </div>
+                <div class="color-container">
+                    <input type="color" class="font-color">
+                    <input type="color" class="bg-color" value="#FFFFFF">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="addressbar">
+        <input type="text" class="address">
+        <div class="fx"> fx</div>
+        <input type="text" class="formula">
+    </div>
+    <div class="gridbar">
+        <div class="block"></div>
+        <div class="toprow"></div>
+        <div class="leftcol"></div>
+        <div class="grid"></div>
+    </div>
+    <div class="sheetbar">
+        <div class="addBtn">
+            <span class="material-icons-outlined material-icons">
+                add
+                </span>
+        </div>
+        <div class="sheet activesheet" id="0">Sheet 1</div>
+    </div>
+    <div class="overlay">
+        <div class="innerform">
+            <label for="myfile">Select a file:</label>
+            <input type="file" name="" class="openFile">
+        </div>
+    </div>
+    <script src="grid.js"></script>
+    <script src="script.js"></script>
+    <script src="newOpenSave.js"></script>
+    <script src="formula.js"></script>
+</body>
+</html>

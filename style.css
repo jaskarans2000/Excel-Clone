@@ -1,0 +1,318 @@
+
+/* ******************************************Overall*************************************************** */
+body{
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+
+/* *************************************Toolbar********************************************************* */
+
+.toolbar{
+    height: 5.5rem;
+    display: flex;
+    /* padding: 0.5rem; */
+    /* background-color: red; */
+}
+
+.logo-container{
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url("excel-logo.png"); */
+    /* background-size: contain; */
+}
+
+.logo{
+    height: 80%;
+    width: 80%;
+}
+.tools{
+    height: 100%;
+    width: 95%;
+}
+.filename{
+    margin-top: 0.1rem;
+    /* margin-left: 0.5rem; */
+    border: 1px solid transparent;
+    border-bottom: 2px solid rgb(192, 190, 190);
+    height: 26px;
+    color: #cccbcb;
+    outline: none;
+    line-height: 22px;
+    font-size: 16px;
+    border-radius: 2px!important;
+    padding: 2px 7px;
+}
+.file_options{
+    display: flex;
+    margin-top: 5px;
+    color: #5e5d5d;
+    /* width: 20%; */
+    align-items: center;
+    justify-content: space-between;
+}
+.option{
+    padding-right: 1rem;
+}
+.divider{
+    margin-top: 4px;
+}
+.formattingbar{
+    height: 1.2rem;
+    display: flex;
+}
+
+.fontsize {
+    position: relative;
+    width: 5rem;
+    height: 1.2rem;
+  }
+
+  .font-family {
+    position: relative;
+    margin-left: 1.5rem;
+    width: 7rem;
+    height: 1.2rem;
+  }
+
+  .bui-container{
+    margin-left: 2rem;
+    display: flex;
+    width: 6rem;
+    border-left: 1px solid darkgray;
+    border-right: 1px solid darkgray;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .align-container{
+    margin-left: 1rem;
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-right: 1px solid darkgray;
+}
+  .color-container{
+    margin-left: 1rem;
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  /* Dropdown Button */
+.dropbtn {
+    /* background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px; */
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: darkgray;
+    color: white;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content div:hover {background-color: rgb(218, 218, 218)}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+/* *****************************Formula and address bar****************************************************** */
+.addressbar{
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.address{
+    height: 80%;
+    width: 5%;
+    text-align: center;
+}
+.fx{
+    width: 2%;
+    text-align: center;
+}
+.formula{
+    width: 92%;
+}
+
+
+/* ***********************************block, toprow,left col***************************************************** */
+.block{
+    width: 2.8rem;
+    background-color: rgb(245, 245, 245);
+    height: 1.5rem;
+    position: fixed;
+    z-index: 45;
+    border: 0.5px solid darkgray;
+}
+
+.toprow{
+    height: 1.5rem;
+    display: flex;
+    position: absolute;
+    left: 2.8rem;
+    top: 0;
+    background-color: rgb(245, 245, 245);
+    z-index: 24;
+}
+
+.box{
+    position: relative;
+    top: 1.5rem;
+    width: 2.8rem;
+    height: 1.5rem;
+    border: 0.5px solid darkgray;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+}
+
+
+
+/* ***************************************************Grid*********************************************************** */
+
+.gridbar{
+    height: calc(100vh - 7.5rem - 2.5rem);
+    /* background-color: lighn; */
+    position: relative;
+    overflow: auto;
+}
+.grid{
+    left: 2.8rem;
+    top: 1.5rem;
+    position: absolute;
+}
+.cell{
+    width: 6rem;
+    border: 0.1px solid #a9a9a973;
+    height: 1.5rem;
+    text-align: center;
+    outline: 0px solid transparent;
+}
+.cells{
+    width: 6rem;
+    border: 0.1px solid #a9a9a973;
+    height: 1.5rem;
+    text-align: center;
+    outline: 0px solid transparent;
+}
+.row{
+    display: flex;
+    height: 1.5rem;
+}
+
+
+
+/* ***************************************Sheetbar*************************************** */
+.sheetbar{
+    height: 2.5rem;
+    background-color: #f1f3f4;
+    border-top: 1px solid #e8eaed;
+    display: flex;
+    position: relative;
+    bottom: 0px;
+    z-index: 1000;
+}
+
+.addBtn{
+    margin-left: 3rem;
+    display: flex;
+    align-items: center;
+    width: 2rem;
+    /* justify-content: space-around; */
+    /* font-size: 1.5rem; */
+    color: rgba(65, 64, 64, 0.884);
+    font-weight: 800;
+}
+.sheet{
+    align-items: center;
+    background-color: #f1f3f4;
+    border-bottom: none;
+    border-left: 1px solid #e8eaed;
+    border-radius: 0;
+    border-right: 1px solid #e8eaed;
+    border-top: 1px solid #e8eaed;
+    display: inline-flex;
+    height: 39px;
+    margin-right: -1px;
+    padding: 0 12px 0 16px;
+}
+
+
+/* ***************************************Active******************************************* */
+
+.activesheet{
+    background-color: #fff;
+    border-top-color: #f1f3f4;
+    box-shadow: 0 1px 3px 1px rgb(60 64 67 / 15%);
+    color: green;
+}
+
+.active{
+    background-color: #fff;
+    /* border :0.5px solid lightblue; */
+    /* box-shadow: 0 1px 3px 1px rgb(60 64 67 / 15%); */
+}
+
+.active-btn{
+    background-color:lightblue;
+}
+
+
+/* ****************************overlay*************************** */
+.overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 20rem; /* Full width (cover the whole page) */
+    height: 20rem; /* Full height (cover the whole page) */
+    top: calc((100vh - 200px)/2);
+    left: calc((100vw - 200px)/2);
+    background-color: white; 
+    border-radius: 10px;
+    box-shadow: 10px 10px 8px 10px #888888;
+    z-index: 100; /* Specify a stack order in case you're using a different order for other elements */
+  }
+
+  .innerform{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
